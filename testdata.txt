@@ -1,26 +1,18 @@
 {
-  "item": {
     "productID": "p1",
     "name": "1stname",
-    "price": "10",
-    "quantity": "10"
-  }
-}
-
-{
-  "item": {
+    "price": 10,
+    "quantity": 10  
+},
+{ 
     "productID": "p2",
     "name": "2ndname",
-    "price": "20",
-    "quantity": "20"
-  }
-}
-
-{
-  "item": {
+    "price": 20,
+    "quantity": 20  
+},
+{ 
     "productID": "p3",
     "name": "3rdname",
-    "price": "30",
-    "quantity": "30"
-  }
+    "price": 30,
+    "quantity": 30  
 }

@@ -1,11 +1,10 @@
-const noteRoutes = require('./note_routes');
-const addtocart = require('./addtocart');
-const productlisting = require('./productlisting');
+const addtocart = require('../controllers/addtocart');
+const productlisting = require('../controllers/listproducts');
 
 module.exports = function(app, db) {
-  addtocart(app, db);
-  noteRoutes(app, db);
-  productlisting(app,db);
-  
-  // Other route groups could go here, in the future
+  app.get('/', function (req, res) {
+    res.send('Hello World!')
+  })
+  app.get('/xyz', productlisting);
+  app.post('/abc',addtocart);  
 };

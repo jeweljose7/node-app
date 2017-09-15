@@ -2,23 +2,16 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const port = 8000;
-const db = require('./config/db');
+const config = require('./config/config');
+const route = require('./routes/index.js')
 
 app.use(bodyParser.json());
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-})
-
-// require('./routes')(app, {});
-
-
-mongoose.connect(db.url, (err, database) => {
+mongoose.connect(config.url, (err, database) => {
   if (err) return console.log(err)
-  require('./routes')(app, database);
-  app.listen(port, () => {
-    console.log('Example app listening on port ' + port);
+  route(app);  
+  app.listen(config.port, () => {
+    console.log('Example app listening on port ' + config.port);
   });               
 })
 
