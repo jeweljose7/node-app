@@ -5,6 +5,6 @@ module.exports = function(app, db) {
   app.get('/', function (req, res) {
     res.send('Hello World!')
   })
-  app.get('/xyz', productlisting);
-  app.post('/abc',addtocart);  
+  app.get('/productListing', productlisting);
+  app.post('/add_to_cart',addtocart);  
 };

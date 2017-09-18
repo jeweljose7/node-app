@@ -1,10 +1,11 @@
 const cartmodel = require('../models/cartschema');
 const mongoose = require('mongoose');
 
-function addNewProduct(productobj){
+function addNewProduct(productobj){ console.log("dfgafgasrfg---------------")
   return new Promise(function (resolve, reject){
     var newproduct = new cartmodel(productobj);
     newproduct.save(function (err,res) {    
+      console.log("dfgafgasrfg---------------",err)
         if (err) reject(err);
         else resolve(res);
     });
