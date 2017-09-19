@@ -3,7 +3,9 @@ var err = {
     status : 422,
     error : "invalid params"
 }
-module.exports = function(req,res) {      
+module.exports = function(req,res) {  
+    res.header("Access-Control-Allow-Origin","*")
+    
       if(req.body.item==undefined) {         
         res.send(err);
       }        

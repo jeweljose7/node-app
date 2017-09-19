@@ -1,6 +1,8 @@
 const productservice = require('../services/productservices')
 
-module.exports = function(req,res) {    
+module.exports = function(req,res) {  
+    res.header("Access-Control-Allow-Origin","*")
+  
     var min = req.query.min_price;
     var max = req.query.max_price;
     var limit = req.query.limit;    
